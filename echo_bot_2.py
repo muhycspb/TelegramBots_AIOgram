@@ -2,7 +2,9 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
 from aiogram.types import Message
 
-BOT_TOKEN = '5621624079:AAGxRyIBTKuj5ziba1NKX7Os1yUnZSOyJGs'
+f = open('token.txt')
+BOT_TOKEN = f.readline()
+f.close()
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
