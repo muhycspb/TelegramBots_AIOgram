@@ -81,7 +81,7 @@ async def positive_answer(message: Message):
         )
 
 
-@dp.message(F.text.lower().in_(['нет', 'не', ' не хочу']))
+@dp.message(F.text.lower().in_(['нет', 'не', 'не хочу']))
 async def negative_answer(message: Message):
     if not users[message.from_user.id]['in_game']:
         await message.answer(
